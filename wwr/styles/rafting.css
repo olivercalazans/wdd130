@@ -58,15 +58,17 @@ article {
     position: relative;
 }
 
+.hero article {
+    position: relative;
+}
+
 .hero img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-.hero,
-article,
-img {
+.hero article img {
     float: right;
     width: 125px;
 }

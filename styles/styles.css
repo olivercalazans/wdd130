@@ -1,5 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 main {
     max-width: 840px;
+}
+
+main img {
+    width: 150px;
+    height: auto;
+    border: #000;
+    padding: 10px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+    float: right;
 }
 
 aside {
@@ -13,16 +28,15 @@ aside {
 }
 
 aside img {
-    width: 200px;
     height: auto;
+    width: 20em;
+    text-align: center;
 }
 
-main img {
-    width: 150px;
-    height: auto;
-    border: #000;
-    padding: 10px;
-    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+aside h2 {
+    position: absolute;
+    top: 47px;
+    left: 150px;
 }
 
 p {
@@ -47,5 +61,15 @@ nav a {
 }
 
 h1 {
+    color: #000;
+}
+
+/* Class Selectors */
+
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: #ddd;
     color: #000;
 }

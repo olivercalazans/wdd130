@@ -1,8 +1,6 @@
 :root {
-    --primary-color: #055a05;
-    --secundary-color: #f4a261;
+    --primary-color: #ffffff;
     --accent1-color: #264653;
-    --accent2-color: #e9c46a;
     --heading-font: "Times New Romam", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -59,7 +57,7 @@ article {
 }
 
 .hero article {
-    position: relative;
+    position: absolute;
 }
 
 .hero img {

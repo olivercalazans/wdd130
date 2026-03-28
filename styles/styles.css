@@ -4,8 +4,32 @@
     box-sizing: border-box;
 }
 
-main {
+/* header, .grid, and footer share max-width and centering */
+header,
+.grid,
+footer {
     max-width: 840px;
+    margin: 0 auto;
+}
+
+/* Navigation bar with flex layout */
+nav {
+    background-color: steelblue;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Style for navigation links */
+nav a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    /* white text for contrast against steelblue */
 }
 
 main img {
@@ -25,6 +49,7 @@ aside {
     background-color: #eee;
     color: #333;
     text-align: center;
+    position: relative;
 }
 
 aside img {
@@ -49,27 +74,34 @@ footer {
     text-align: center;
 }
 
-nav {
-    background-color: antiquewhite;
-    padding: 10px;
-}
-
-nav a {
-    color: #000;
-    padding: 10px;
-    display: block;
-}
-
 h1 {
     color: #000;
+    border-bottom: 1px solid #000;
+    /* bottom border added */
 }
 
 /* Class Selectors */
-
 .box {
     margin: 1rem;
     border: 1px solid rgb(0 0 0 / 10%);
     padding: 1rem;
     background-color: #ddd;
     color: #000;
+}
+
+/* Grid layout: aside on left, main on right */
+.grid {
+    display: grid;
+    align-items: start;
+    /* aligns items to the top */
+}
+
+main {
+    grid-column: 2/3;
+    margin: 1rem;
+}
+
+aside {
+    grid-column: 1/2;
+    grid-row: 1/2;
 }

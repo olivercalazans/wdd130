@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>HTML & CSS Knowledge Quiz | Master the Basics</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+
+<body>
+    <main class="quiz-container">
+        <div class="quiz-card">
+            <h1>📘 HTML & CSS Core Concepts Quiz</h1>
+            <p class="quiz-intro">Test your understanding of fundamental web technologies. Answer
+                all four questions below.</p>
+            <form id="quizForm" action="#" method="post">
+
+                <div class="form-group">
+                    <label for="q1">1. Fill in the blank: The CSS property used to change the
+                        <strong>background color</strong> of an element is __________.</label>
+                    <input type="text" id="q1" name="q1" placeholder="e.g., background-color"
+                      required>
+                    <span class="hint">* single CSS property (hyphen-case)</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="q2">2. Short answer: Explain what the <code>z-index</code> property
+                        does in CSS and describe a common scenario where you would use it.</label>
+                    <textarea id="q2" name="q2" rows="4"
+                      placeholder="Write your concise explanation here..." required></textarea>
+                    <span class="hint">* mention stacking context, overlapping elements, etc.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="q3">3. Select the correct CSS syntax that targets ALL
+                        <code>&lt;p&gt;</code> elements and sets their text color to <span
+                          style="color:#2c7da0;">blue</span>.</label>
+                    <select id="q3" name="q3" required>
+                        <option value="" selected disabled>— Choose the correct answer —</option>
+                        <option value="p_color_blue_proper">p { color: blue; }</option>
+                        <option value="p_text_color">p { text-color: blue; }</option>
+                        <option value="p_color_incorrect">p: color: blue;</option>
+                        <option value="p_style_attribute">&lt;p style="color: blue;"&gt; (inline
+                            style)</option>
+                    </select>
+                    <span class="hint">* only one syntax is fully correct in standard CSS</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="q4">4. How many heading levels are available in HTML (from
+                        <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>)?</label>
+                    <input type="number" id="q4" name="q4" min="1" max="6" step="1"
+                      placeholder="Enter a number (1–6)" required>
+                    <span class="hint">* integer between 1 and 6</span>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Submit Quiz</button>
+                </div>
+            </form>
+            <footer class="quiz-footer">
+                <p>✨ Each question tests essential HTML/CSS knowledge — good luck!</p>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            const form = document.getElementById('quizForm');
+            if (form) {
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    const isValid = form.checkValidity();
+                    if (!isValid) {
+                        form.reportValidity();
+                        return;
+                    }
+
+                    const q1Answer = document.getElementById('q1').value.trim() || '(not answered)';
+                    const q2Answer = document.getElementById('q2').value.trim() || '(not answered)';
+                    const q3Select = document.getElementById('q3');
+                    const q3Answer = q3Select.options[q3Select.selectedIndex]?.text || '(not selected)';
+                    const q4Answer = document.getElementById('q4').value || '(not provided)';
+
+                    alert(`✅ Quiz submitted (demo mode)\n\nYour responses:\n1. ${q1Answer}\n2. ${q2Answer.substring(0, 80)}${q2Answer.length > 80 ? '…' : ''}\n3. ${q3Answer}\n4. ${q4Answer}\n\nGreat attempt — review the concepts!`);
+                    console.log('Quiz submitted — answers:', { q1: q1Answer, q2: q2Answer, q3: q3Answer, q4: q4Answer });
+                });
+            }
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(145deg, #e9f0f5 0%, #d9e2ec 100%);
+    font-family: system-ui, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+}
+
+.quiz-container {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.quiz-card {
+    background: #ffffff;
+    border-radius: 2rem;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 2rem 2rem 2.2rem 2rem;
+    transition: all 0.2s ease;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1e3c72, #2b4f8c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.3px;
+    border-left: 6px solid #2c7da0;
+    padding-left: 1.2rem;
+}
+
+.quiz-intro {
+    color: #2c3e4e;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.75rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #0a2b3e;
+    margin-bottom: 0.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem;
+}
+
+label code,
+.form-group code {
+    background: #eef2f6;
+    padding: 0.2rem 0.4rem;
+    border-radius: 8px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.9em;
+    color: #c44536;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 1rem;
+    background-color: #fefefe;
+    transition: all 0.2s;
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #2c7da0;
+    box-shadow: 0 0 0 3px rgba(44, 125, 160, 0.2);
+    background-color: #ffffff;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+select {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2rem;
+    cursor: pointer;
+}
+
+.hint {
+    font-size: 0.75rem;
+    color: #5e6f8d;
+    margin-top: 0.2rem;
+    letter-spacing: 0.2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.hint::before {
+    content: "💡";
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.form-actions {
+    margin-top: 0.5rem;
+}
+
+.submit-btn {
+    background: linear-gradient(100deg, #1f6390, #2a7f9c);
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.9rem 1.8rem;
+    border: none;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    letter-spacing: 0.3px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(100deg, #0e4e72, #1e6a85);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px -10px rgba(28, 80, 105, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+}
+
+.quiz-footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #6c86a3;
+    border-top: 1px solid #e2edf2;
+    padding-top: 1.5rem;
+}
+
+@media (max-width: 650px) {
+    .quiz-card {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        padding-left: 0.8rem;
+    }
+
+    input,
+    textarea,
+    select {
+        padding: 0.7rem 0.9rem;
+    }
+
+    .submit-btn {
+        padding: 0.75rem 1.2rem;
+    }
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible {
+    outline: 2px solid #1f6390;
+    outline-offset: 2px;
+}
+
+strong,
+b {
+    color: #1a4b6e;
+}

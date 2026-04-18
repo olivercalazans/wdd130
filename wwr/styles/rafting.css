@@ -24,7 +24,6 @@ footer {
     margin: 0 auto;
 }
 
-/* Header com CSS Grid */
 header {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -38,7 +37,6 @@ header img {
     height: auto;
 }
 
-/* Navegação com Flexbox */
 nav {
     display: flex;
     justify-content: flex-end;
@@ -62,7 +60,6 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* Estilo global para h1 dentro do main (obrigatório e único) */
 main h1 {
     font-family: var(--heading-font);
     background-color: var(--accent1-color);
@@ -84,9 +81,6 @@ h2 {
     font-size: 1.8rem;
 }
 
-/* ========== CONTACT PAGE SPECIFIC STYLES ========== */
-
-/* Company Info + Map grid layout */
 .contact-info {
     margin: 1rem 0 2rem;
     background: #ffffff;
@@ -152,7 +146,6 @@ h2 {
     display: block;
 }
 
-/* Employee profiles (team grid) */
 .employee-profiles {
     margin: 2rem 0;
 }
@@ -206,7 +199,6 @@ h2 {
     font-weight: 500;
 }
 
-/* Contact form styling */
 .contact-form {
     background: #f8fafc;
     border-radius: 24px;
@@ -318,7 +310,6 @@ textarea:focus {
     transform: scale(0.99);
 }
 
-/* Footer layout */
 footer {
     display: flex;
     justify-content: space-between;
@@ -352,7 +343,6 @@ footer p {
     padding: 0;
 }
 
-/* Responsive adjustments */
 @media (max-width: 860px) {
 
     header,
@@ -413,9 +403,6 @@ footer p {
     border-radius: 6px;
 }
 
-/* ========== NEW STYLES FOR HOME PAGE (index.html) ========== */
-
-/* Full-width hero with absolute heading */
 .hero-full-width {
     position: relative;
     width: 100%;
@@ -441,7 +428,6 @@ footer p {
     transform: translate(-50%, -50%);
     text-align: center;
     background-color: rgba(38, 70, 83, 0.85);
-    /* var(--accent1-color) with opacity */
     color: white;
     padding: 1.5rem 2.5rem;
     border-radius: 20px;
@@ -468,7 +454,6 @@ footer p {
     font-weight: 500;
 }
 
-/* Call to action banner */
 .cta-banner {
     background: linear-gradient(135deg, #f4a261 0%, #e76f51 100%);
     border-radius: 24px;
@@ -507,7 +492,6 @@ footer p {
     transform: scale(1.02);
 }
 
-/* Home grid layout (CSS Grid) */
 .home-grid-section {
     margin: 2rem 0;
 }
@@ -549,7 +533,6 @@ footer p {
     color: #2c3e44;
 }
 
-/* Newsletter section */
 .newsletter-section {
     background-color: #e9f0f5;
     border-radius: 28px;
